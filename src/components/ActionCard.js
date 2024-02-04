@@ -29,6 +29,7 @@ const ActionCard = ({ username1, username2, location, timestamp, image1, image2 
           </div>
         </div>
 
+        {/* Location and Timestamp */}
         <div style={styles.locationInfo}>
           <span style={styles.locationText}>{location}</span>
           <span style={styles.timestampText}>{timestamp}</span>
@@ -83,6 +84,12 @@ const styles = {
     color: '#646464',
     marginTop: '5px',
   },
+  locationInfo: {
+    marginTop: '10px',
+    display: 'flex',
+    flexDirection: 'column', // Stack location and timestamp vertically
+    alignItems: 'center', // Center-align the text
+  },
   timestampText: {
     fontSize: '12px',
     color: '#A4A4A4',
@@ -104,9 +111,6 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     margin: '0 10px',
-  },
-  locationInfo: {
-    marginTop: '10px',
   },
 };
 
