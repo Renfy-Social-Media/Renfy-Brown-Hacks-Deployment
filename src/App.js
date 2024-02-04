@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { data, locationData } from "./Content"; // Assuming locationData is also imported from Content.js
 import ActionCard from "./components/ActionCard";
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
   const [usernamePairs, setUsernamePairs] = useState([]);
@@ -53,6 +54,7 @@ const App = () => {
               />
             </div>
         ))}
+        <Analytics />
       </div>
   );
 };
